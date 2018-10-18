@@ -1,0 +1,11 @@
+<main class="main">
+    <h1 class="header">My Thoughts</h1>
+    <div ng-if="!$ctrl.hideme">
+        <button class="button" ng-click="$ctrl.openForm()">New Thought</button>
+        <div class="posts">
+            <post ng-repeat="post in $ctrl.posts" item="post"></post>
+        </div>
+    </div>
+    <post-form on-submit="$ctrl.addPost" ng-if="$ctrl.showme"></post-form>
+</main>
+        
